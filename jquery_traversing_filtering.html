@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery_Traversing_Filtering</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        #title{
+            margin-top: 20px;
+            font-size: 32px;
+        }
+
+        .box{
+            width: 800px;
+            height: auto;
+            border: 3px solid orange;
+            margin: 20px auto;
+        }
+
+        #boxData2{
+            height: auto;
+        }
+
+        #boxData2 div{
+            border: 1px solid rebeccapurple;
+        }
+
+        .bg{
+            background-color: orchid;
+        }
+
+        .bg2{
+            background-color: burlywood;
+        }
+
+        #btn{
+            padding: 3px 8px;
+        }
+    </style>
+</head>
+<body>
+    
+    <center><h1>Jquery_Traversing_Filtering</h1></center>
+    <center><button id="btn">Click me</button></center>
+
+    <div class="box" id="boxData">
+        <p class="item tmp1">1. HTML</p>
+        <div class="item tmp2">2. CSS</div>
+        <p class="item tmp3">3. Javascript</p>
+        <p class="item"><strong>4. Jquery</strong></p>
+        <div class="item"><strong>5. Handlebars</strong></div>
+        <p class="item">6. NodeJS</p>
+        <p class="item"><strong class="react">7. ReactJS</strong></p>
+    </div>
+
+    <script>
+        //:has()
+        // $(function() {
+        //     $('#btn').click(function(e) {
+        //         $('#boxData > *').has('strong.react').addClass('bg2');
+        //     });
+        // });
+
+        //:is()
+        //$(function() {
+            // $('#btn').click(function(e) {
+            //     var elements = $('#boxData > *').is('div');
+            //     console.log(elements);
+            // });
+
+        //     $('#btn').click(function(e) {
+        //         let elements = $('#boxData > *').is(function(index) {
+        //             return ($(this).text().length > 6);
+        //         });
+        //         console.log(elements);
+        //     });
+        // });
+
+        //map(callback(index, DOM element){})
+        // $(function() {
+        //     $('#btn').click(function() {
+        //         var tmp = $('#boxData > *').map(function(index, elements) {
+        //             //console.log(index + ": " + elements.textContent);
+        //             if( elements.tagName == "DIV" ) {
+        //                 return elements;
+        //             }
+        //         }); 
+        //         $(tmp).addClass('bg2');
+        //     })
+        // });
+
+        //not()
+        // $(function() {
+        //     $('#btn').click(function() {
+        //         var tmp = $('#boxData > *').not($(':even'));
+        //         tmp.addClass('bg2');
+        //     });
+        // });
+
+        //slice(start [,end])
+        // $(function() {
+        //     $('#btn').click(function() {
+        //         var tmp = $('#boxData > *').slice(3);
+        //         tmp.addClass('bg2');
+        //     });
+        // });
+
+        //.add(selector), .add(element), .add(jqueryObject)
+        // $(function() {
+        //     $('#btn').click(function() {
+        //         $('#boxData .tmp1').add('.tmp3').addClass('bg2');
+        //         $('#boxData .tmp2').add('center').add($('.react')).addClass('bg');
+        //     });
+        // });
+
+        //.contents()
+        // $(function() {
+        //     $('#btn').click(function() {
+        //         let tmp = $('#boxData').contents();
+        //         console.log(tmp);
+        //     });
+        // });
+
+        //each()
+        // $(function() {
+        //     $('#btn').click(function() {
+        //         $('#boxData > *').each(function(index, elements) {
+        //             ( index % 2 === 0 ) ? elements.setAttribute('class', 'bg2') : elements.setAttribute('class', 'bg');
+        //         });
+        //     });
+        // });
+
+        //.end()
+        // $(function() {
+        //     $('#btn').click(function() {
+        //         $('#boxData').find('.tmp1').addClass('bg').end().find('.react').addClass('bg2');
+        //     });
+        // });
+    </script>
+</body>
+</html>

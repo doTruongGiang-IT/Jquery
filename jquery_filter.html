@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        #title{
+            margin-top: 20px;
+            font-size: 32px;
+        }
+
+        .box{
+            width: 800px;
+            height: auto;
+            border: 3px solid orange;
+            margin: 20px auto;
+        }
+
+        #boxData2{
+            height: auto;
+        }
+
+        #boxData2 div{
+            border: 1px solid rebeccapurple;
+        }
+
+        .bg{
+            background-color: orchid;
+        }
+
+        .bg2{
+            background-color: burlywood;
+        }
+
+        #btn{
+            padding: 3px 8px;
+        }
+    </style>
+</head>
+<body>
+    <center id="title"><b>Jquery Child Filter</b></center>
+
+    <div id="boxData" class="box">
+        <div>1. HTML</div>
+        <div>2.CSS</div>
+        <p>3.PHP</p>
+        <p>4.Angular</p>
+        <span>5. VueJS</span>
+    </div>
+
+    <div id="boxData2" class="box">
+        <div class="item bg">1. HTML</div>
+        <p class="item">2.CSS</p>
+        <div class="item bg">3. JAVASCRIPT</div>
+        <div class="item">4.PHP</div>
+    </div>
+
+    <div id="boxData3" class="box">
+        <div>1. ReactJS</div>
+    </div>
+
+    <center><button id="btn1">Click me</button></center>
+
+    <script>
+        $(function() {
+            $('#btn1').on('click', function(e) {
+                e.preventDefault();
+                //:first-child
+                //get the first element
+                // $('#boxData > :first-child').addClass('bg2');
+                // $('#boxData2 > :first-child').addClass('bg2');
+
+                //:first-of-type
+                //get the first element of any type
+                // $('#boxData > :first-of-type').addClass('bg2');
+                // $('#boxData2 > :first-of-type').addClass('bg2');
+
+                //:last-child
+                //get the last element
+                // $('#boxData > :last-child').addClass('bg2');
+                // $('#boxData2 > :last-child').addClass('bg2');
+
+                //:last-of-type
+                //get the last element of any type
+                // $('#boxData > :last-of-type').addClass('bg2');
+                // $('#boxData2 > :last-of-type').addClass('bg2');
+
+                //:nth-child()
+                //get any element, it also can put n into ()
+                // $('#boxData > :nth-child(3)').addClass('bg2');
+                // $('#boxData2 > :nth-child(2)').addClass('bg2');
+
+                //:nth-last-child()
+                //get any element, it also can put n into ()
+                // $('#boxData > :nth-last-child(3)').addClass('bg2');
+                // $('#boxData2 > :nth-last-child(2)').addClass('bg2');
+
+                //:nth-last-of-type()
+                //get any element of any type, it also can put n into ()
+                // $('#boxData > p:nth-last-of-type(2)').addClass('bg2');
+                // $('#boxData2 > div:nth-last-of-type(2)').addClass('bg2');
+
+                //:nth-of-type()
+                //get any element of any type, it also can put n into ()
+                // $('#boxData > div:nth-of-type(2)').addClass('bg2');
+                // $('#boxData2 > p:nth-of-type(1)').addClass('bg2');
+                
+                //only-child
+                //get the element that only has 1 child element inside it not including node text
+                // $('#boxData3 > :only-child').addClass('bg2');
+                // $('center > :only-child').addClass('bg2');
+
+                //only-of-type
+                //get the element that only has 1 child element inside it not including node text
+                // $('#boxData > :only-of-type').addClass('bg2');
+                // $('#boxData2 > p:only-of-type').addClass('bg2');
+                // $('#boxData3 > div:only-of-type').addClass('bg2');
+                // $('center > b:only-of-type').addClass('bg2');
+            });
+        });
+    </script>
+</body>
+</html>

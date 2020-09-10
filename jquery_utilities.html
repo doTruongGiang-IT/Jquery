@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY UTILITIES</title>
+    <script src="assets/jquery-3.5.1.js"></script>
+    <script src="assets/jquery_utilities.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        #title{
+            margin-top: 20px;
+            font-size: 32px;
+        }
+
+        .box{
+            width: 800px;
+            height: 150px;
+            border: 3px solid orange;
+            margin: 20px auto;
+        }
+
+        #boxData2{
+            height: auto;
+        }
+
+        #boxData2 div{
+            border: 1px solid rebeccapurple;
+        }
+
+        .bg{
+            background-color: orchid;
+        }
+
+        .bg2{
+            background-color: burlywood;
+        }
+
+        #btn{
+            padding: 3px 8px;
+        }
+    </style>
+</head>
+<body>
+    <center id="title"><b>$.contains( container, contained )</b></center>
+    <div id="boxData" class="box">
+        <div>1. HTML</div>
+        <div>2.CSS</div>
+    </div>
+    <center><button id="btn1">Click me</button></center>
+
+    <center id="title"><b>$.each( collection, callback( indexInArray, valueOfElement ) )</b></center>
+    <div id="boxData2" class="box">
+        <div class="item">1. HTML</div>
+        <div class="item">2.CSS</div>
+        <div class="item">3. JAVASCRIPT</div>
+        <div class="item">4.PHP</div>
+    </div>
+    <center><button id="btn2">Click me</button></center>
+
+    <center id="title"><b>$.grep( array, function(elementOfArray, indexInArray) [, invert] )</b></center><br />
+    <center><button id="btn3">Click me</button></center>
+
+    <center id="title"><b>$.inArray( value, array [, formIndex] ). Trả về phần tử đầu tiên tìm thấy trong mảng</b></center><br />
+    <center><button id="btn4">Click me</button></center>
+
+    <center id="title"><b>$.makeArray( object )</b></center><br />
+    <center><button id="btn5">Click me</button></center>
+
+    <center id="title"><b>$.map( arr, function(value, index) )</b></center><br />
+    <center><button id="btn6">Click me</button></center>
+
+    <center id="title"><b>$.merge( array1, array2 )</b></center><br />
+    <center><button id="btn7">Click me</button></center>
+
+    <center id="title"><b>$.noop(  )</b></center><br />
+    <center><button id="btn8">Click me</button></center>
+    
+    <center id="title"><b>$.contains( container, contained )</b></center>
+    <div id="boxData" class="box">
+        <div id="html">1. HTML</div>
+        <div>2.CSS</div>
+    </div>
+
+    <center id="title"><b>$.each( collection, callback( indexInArray, valueOfElement ) )</b></center>
+    <div id="boxData2" class="box">
+        <div class="item bg">1. HTML</div>
+        <p class="item">2.CSS</p>
+        <div class="item bg">3. JAVASCRIPT</div>
+        <div class="item">4.PHP</div>
+    </div>
+    <center><button id="btn9">Click me</button></center>
+</body>
+</html>
